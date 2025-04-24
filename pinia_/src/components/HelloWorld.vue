@@ -1,20 +1,18 @@
 <script setup>
 import { ref } from 'vue'
 import useSum from '@/store/sum'
-console.log('"---------------"');
 const useSumStore = useSum();
-// console.log(useSumStore);
 console.log(useSumStore.sum);
 function add() {
   // console.log(useSumStore);
-  useSumStore.sum++;
+  useSumStore.add();
 
 }
 
 </script>
 <template>
   <div>
-    <div>{{ useSumStore.sum }}</div>
+    <div>{{ useSumStore.sum }}/{{ useSumStore.doubleSum }}</div>
     <button @click="add">+</button>
   </div>
 
